@@ -1,0 +1,122 @@
+.compare {
+  .section-heading {
+    @include font-size(10, 18);
+    color: $subSecondary;
+    margin: 0;
+    margin-bottom: 34px;
+    opacity: .73;
+    text-transform: uppercase;
+  }
+
+  table {
+    width: 100%;
+
+    thead {
+      th {
+        color: $subSecondary;
+        font-size: 22px;
+        font-weight: 600;
+        text-align: left;
+        padding: 30px 0;
+      }
+    }
+
+    tbody {
+      td {
+        line-height: 1.4;
+        padding: 18px 0;
+
+        &:nth-of-type(1) {
+          @include font-size(12, 18);
+          color: $subSecondary;
+          font-weight: 600;
+        }
+
+        &:nth-of-type(2) {
+          @include font-size(10, 18);
+          color: #7D7D7D;
+        }
+
+        &:nth-of-type(3) {
+          @include font-size(10, 18);
+          color: $secondary;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $tabletWidth) {
+    .section-heading {
+      margin-bottom: 8px;
+    }
+  }
+
+  @media (max-width: $sTabletWidth) {
+    .section-heading {
+      margin-bottom: 32px;
+    }
+
+    table {
+      display: block;
+
+      thead {
+        display: none;
+      }
+
+      tbody {
+        display: block;
+
+        tr {
+          display: flex;
+          flex-wrap: wrap;
+          margin-bottom: 24px;
+
+          td {
+            padding: 0 5px;
+
+            &:nth-of-type(1) {
+              margin-bottom: 8px;
+              width: 100%;
+            }
+
+            &:nth-of-type(2),
+            &:nth-of-type(3) {
+              flex: 1;
+
+              &::before {
+                content: attr(data-label);
+                color: #7D7D7D;
+                display: block;
+                margin-bottom: 3px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    .section-heading {
+      margin-bottom: 20px;
+    }
+
+    table {
+      tbody {
+        tr {
+          td {
+            padding: 0;
+
+            &:nth-of-type(2) {
+              padding-right: 5px;
+            }
+
+            &:nth-of-type(3) {
+              padding-left: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

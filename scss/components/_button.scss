@@ -1,0 +1,23 @@
+button,
+.button {
+  background-color: #FFF;
+  border: 2px solid $secondary;
+  border-radius: 11px;
+  color: $secondary;
+  cursor: pointer;
+  padding: 10px 23px;
+  transition: background-color .25s;
+
+  &:hover,
+  &--state--active {
+    background-color: $secondary;
+    color: #FFF;
+  }
+
+  &--style--blank {
+    background-color: transparent;
+    border-color: $secondary;
+    color: #fff;
+    text-decoration: none;
+  }
+}

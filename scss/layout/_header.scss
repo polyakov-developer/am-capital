@@ -1,0 +1,140 @@
+.header {
+  padding-bottom: 24px;
+  padding-top: 24px;
+
+  .container {
+    align-items: center;
+    display: flex;
+  }
+
+  &__nav {
+    margin-left: auto;
+
+    ul {
+      display: flex;
+      height: 100%;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: flex;
+        margin-right: 40px;
+        position: relative;
+
+        a {
+          border: 0;
+          color: $primary;
+          display: flex;
+          font-size: 14px;
+          text-decoration: none;
+
+          i {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url(../img/icons/arrow_down.svg);
+            display: block;
+            height: 10px;
+            margin-left: 5px;
+            margin-top: 1px;
+            width: 10px;
+          }
+        }
+
+        ul {
+          display: none;
+          height: auto;
+          left: 0;
+          padding-bottom: 10px;
+          padding-top: 10px;
+          position: absolute;
+          top: 100%;
+          width: 100%;
+
+          li {
+            margin-bottom: 8px;
+            width: 100%;
+          }
+        }
+
+        &:hover {
+          &>ul {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  &__logo {
+    border: 0;
+  }
+
+  &__phone {
+    display: block;
+    text-decoration: none;
+  }
+
+  &__phone--type--mobile {
+    background-color: $secondary;
+    background-image: url(../img/icons/phone.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    height: 36px;
+    width: 36px;
+  }
+
+  &__burger {
+    background-color: $subSecondary;
+    background-image: url(../img/icons/burger.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    height: 36px;
+    margin-left: 20px;
+    width: 36px;
+  }
+
+  @media (max-width: 1024px) {
+    &__nav {
+      display: none;
+    }
+
+    &__phone {
+      margin-left: auto;
+    }
+
+    &__burger {
+      display: block;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__phone {
+      display: none;
+    }
+
+    &__phone--type--mobile {
+      display: block;
+    }
+  }
+
+  @media (max-width: $phoneWidth) {
+    padding-bottom: 14px;
+    padding-top: 14px;
+    
+    .logo {
+      img {
+        max-width: 65px;
+      }
+    }
+  }
+}
