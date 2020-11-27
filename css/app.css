@@ -1651,52 +1651,190 @@ a:hover:not(.button) {
   padding-bottom: 0;
   padding-top: 0;
 }
-
+.consultation .section-heading {
+  /* Define variable for media query */
+  /* Define variable for fallback */
+  /* Base font size */
+  font-size: 18px;
+}
+@media (min-width: 320px) and (max-width: 1253px) {
+  .consultation .section-heading {
+    /* Adds a fallback for unsupported browsers */
+    font-size: 24px;
+    /* The fluid typography magic 🌟  */
+    font-size: calc(18px + (30 - 18) * (100vw - 320px) / (1254 - 320));
+  }
+}
+@media (min-width: 1254px) {
+  .consultation .section-heading {
+    font-size: 30px;
+  }
+}
 .consultation .container {
   padding-bottom: 120px;
   padding-top: 120px;
 }
-
 .consultation .row {
-  background: linear-gradient(189.79deg, #8471FF 8.03%, #717CFF 53.55%);
-  border-radius: 25px;
   display: flex;
   padding: 32px 88px;
   position: relative;
 }
-
 .consultation .row .col {
   padding: 15px 0;
   position: relative;
 }
-
 .consultation .row .col--left {
   width: 30%;
 }
-
 .consultation .row .col--right {
   width: 70%;
 }
-
+.consultation .row::before {
+  background: linear-gradient(189.79deg, #8471FF 8.03%, #717CFF 53.55%);
+  bottom: 0;
+  border-radius: 25px;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: 0.75;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
 .consultation img {
   left: -65%;
   position: absolute;
   top: -70%;
 }
-
 .consultation p {
   color: #fff;
   line-height: 1.4;
   margin: 1rem 0;
   text-shadow: 0px 1px 1px #4E429A;
 }
-
 .consultation p:not(.section-heading) {
   max-width: 410px;
 }
-
 .consultation form {
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 24px;
+}
+.consultation form .form-control {
+  margin-right: 10px;
+  max-width: 243px;
+  width: 100%;
+}
+@media (min-width: 769px) {
+  .consultation form button[type=submit] span {
+    display: none;
+  }
+  .consultation form button[type=submit]::after {
+    margin-left: 0;
+  }
+}
+@media (max-width: 1200px) {
+  .consultation .row .col--left img {
+    max-width: 55vw;
+    top: -63%;
+  }
+}
+@media (max-width: 1070px) {
+  .consultation .row .col--left img {
+    max-width: 55vw;
+    top: -54%;
+  }
+}
+@media (max-width: 1024px) {
+  .consultation .section-heading {
+    margin-top: 0;
+  }
+  .consultation .row .col {
+    padding: 0;
+  }
+  .consultation .row .col--left img {
+    left: -89%;
+    max-width: 64vw;
+    top: -84%;
+  }
+  .consultation form .form-control {
+    max-width: 230px;
+  }
+}
+@media (max-width: 960px) {
+  .consultation {
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+  .consultation .container {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  .consultation .row {
+    padding: 32px 50px;
+  }
+  .consultation .row .col--left {
+    display: none;
+  }
+  .consultation .row .col--right {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .consultation .form-control {
+    flex: 1;
+    max-width: initial;
+  }
+  .consultation button[type=submit] {
+    flex: 1;
+  }
+}
+@media (max-width: 640px) {
+  .consultation form .form-control {
+    flex: none;
+    margin-bottom: 15px;
+    width: calc(50% - 10px);
+  }
+  .consultation form .form-control:last-of-type {
+    margin-right: 0;
+  }
+  .consultation form button[type=submit] {
+    flex: none;
+    width: auto;
+  }
+}
+@media (max-width: 520px) {
+  .consultation form .form-control {
+    margin-right: 0;
+    max-width: initial;
+    width: 100%;
+  }
+  .consultation form button[type=submit] {
+    flex: none;
+    width: auto;
+  }
+}
+@media (max-width: 420px) {
+  .consultation .container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .consultation .row {
+    padding: 15px 20px;
+  }
+  .consultation form .form-control {
+    font-size: 14px;
+  }
+  .consultation form button[type=submit] {
+    font-size: 14px;
+  }
+  .consultation p:not(.section-heading) {
+    color: #4B52A8;
+    font-size: 14px;
+    text-shadow: none;
+  }
 }
 
 form .form-control {
@@ -1708,17 +1846,36 @@ form .form-control {
   outline: none;
   padding: 20px 24px;
 }
-
 form .legal {
   color: #313782;
   display: block;
   font-size: 12px;
   margin-top: 10px;
 }
-
 form .legal a {
   border-bottom: 1px solid currentColor;
   color: #313782;
+}
+form button[type=submit] {
+  align-items: center;
+  display: flex;
+}
+form button[type=submit]::after {
+  background-image: url(../img/icons/arrow_right.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  height: 16px;
+  margin-left: 12px;
+  width: 18px;
+}
+@media (max-width: 768px) {
+  form .form-control {
+    font-size: 16px;
+    max-width: initial;
+    padding: 16px 20px;
+  }
 }
 
 .footer {
