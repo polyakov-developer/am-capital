@@ -1339,6 +1339,7 @@ a:hover:not(.button) {
   }
 }
 
+<<<<<<< HEAD
 .qwestions {
   padding-top: 0;
   padding-bottom: 0;
@@ -1486,6 +1487,11 @@ a:hover:not(.button) {
   }
 }
 
+=======
+.compare {
+  padding-bottom: 0;
+}
+>>>>>>> 9d0c2e5... Небольшие фиксы, начал работу над блоком с консультацией
 .compare .section-heading {
   /* Define variable for media query */
   /* Define variable for fallback */
@@ -1522,7 +1528,7 @@ a:hover:not(.button) {
 }
 .compare table tbody td {
   line-height: 1.4;
-  padding: 18px 0;
+  padding: 18px 7px;
 }
 .compare table tbody td:nth-of-type(1) {
   /* Define variable for media query */
@@ -1638,6 +1644,81 @@ a:hover:not(.button) {
   .compare table tbody tr td:nth-of-type(3) {
     padding-left: 5px;
   }
+}
+
+.consultation {
+  overflow: hidden;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.consultation .container {
+  padding-bottom: 120px;
+  padding-top: 120px;
+}
+
+.consultation .row {
+  background: linear-gradient(189.79deg, #8471FF 8.03%, #717CFF 53.55%);
+  border-radius: 25px;
+  display: flex;
+  padding: 32px 88px;
+  position: relative;
+}
+
+.consultation .row .col {
+  padding: 15px 0;
+  position: relative;
+}
+
+.consultation .row .col--left {
+  width: 30%;
+}
+
+.consultation .row .col--right {
+  width: 70%;
+}
+
+.consultation img {
+  left: -65%;
+  position: absolute;
+  top: -70%;
+}
+
+.consultation p {
+  color: #fff;
+  line-height: 1.4;
+  margin: 1rem 0;
+  text-shadow: 0px 1px 1px #4E429A;
+}
+
+.consultation p:not(.section-heading) {
+  max-width: 410px;
+}
+
+.consultation form {
+  margin-top: 24px;
+}
+
+form .form-control {
+  background-color: #fff;
+  border: 1px solid #717CFF;
+  border-radius: 11px;
+  color: #7D7D7D;
+  font-size: 18px;
+  outline: none;
+  padding: 20px 24px;
+}
+
+form .legal {
+  color: #313782;
+  display: block;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+form .legal a {
+  border-bottom: 1px solid currentColor;
+  color: #313782;
 }
 
 .footer {
