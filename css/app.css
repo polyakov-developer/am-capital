@@ -657,6 +657,36 @@ a:hover:not(.button) {
   background: #717CFF !important;
 }
 
+/**Advantages**/
+.advantages {
+  padding-top: 20px;
+}
+.advantages .section-heading {
+  margin: 0;
+  width: 60%;
+}
+.advantages .txtblock-wrapper {
+  margin-top: 24px;
+  color: #7d7d7d;
+  line-height: 24px;
+}
+@media (max-width: 1024px) {
+  .advantages .section-heading {
+    width: 70%;
+  }
+}
+@media (max-width: 420px) {
+  .advantages .section-heading {
+    width: 100%;
+  }
+  .advantages .txtblock-wrapper {
+    font-size: 10px;
+    margin-top: 10px;
+    line-height: 14px;
+  }
+}
+
+/**Advantages**/
 .header {
   padding-bottom: 24px;
   padding-top: 24px;
@@ -1173,6 +1203,7 @@ a:hover:not(.button) {
 
 .reasons {
   padding-top: 0;
+  padding-bottom: 0;
 }
 .reasons .section-heading {
   margin: 0;
@@ -1329,6 +1360,153 @@ a:hover:not(.button) {
   .reasons .row .col--right .bg::after {
     bottom: -115px;
     height: 240px;
+  }
+}
+
+.qwestions {
+  padding-top: 0;
+  padding-bottom: 0;
+  background: #F1F1F1;
+}
+.qwestions .qwestions-block {
+  display: flex;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+.qwestions .qwestions-block .row {
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.qwestions .qwestions-block .row .col {
+  display: flex;
+  flex-direction: column;
+}
+.qwestions .qwestions-block .row .col:nth-child(1) {
+  margin-right: 40px;
+}
+.qwestions .qwestions-block .row .col:nth-child(3) {
+  margin-left: 40px;
+}
+.qwestions .qwestions-block .qwestions__item {
+  width: 380px;
+  background: #FFFFFF;
+  display: flex;
+  border-radius: 15px;
+  padding: 24px;
+  height: 100%;
+  position: relative;
+}
+.qwestions .qwestions-block .qwestions__item .qwestions__item--text {
+  display: flex;
+  flex-direction: column;
+  margin-right: 46px;
+  font-size: 12px;
+  color: #7D7D7D;
+  line-height: 20px;
+}
+.qwestions .qwestions-block .qwestions__item .qwestions__item--text .title {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-weight: 600;
+  font-size: 16px;
+  color: #37474F;
+  line-height: 22px;
+}
+.qwestions .qwestions-block .qwestions__item .qwestions__item--text .more {
+  border: 0;
+  font-size: 10px;
+  font-weight: 600;
+  margin-top: 0px;
+}
+.qwestions .qwestions-block .qwestions__item .qwestions__item--text .full-link {
+  border: none;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.qwestions .qwestions-block .qwestions__item .qwestions__item--text .more.link--with-arrow:after {
+  height: 8px;
+  width: 8px;
+}
+.qwestions .qwestions-block .qwestions__item .qwestions__item--icon {
+  display: flex;
+  align-items: flex-start;
+}
+.qwestions .swiper-container {
+  display: none;
+}
+.qwestions .swiper-container .swiper-pagination {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  position: static;
+}
+@media (max-width: 580px) {
+  .qwestions .qwestions-block {
+    display: none;
+  }
+  .qwestions .swiper-container {
+    display: block;
+  }
+  .qwestions .swiper-container .qwestions-block {
+    display: flex;
+    margin-left: 0;
+    margin-right: 0;
+    min-height: initial;
+  }
+  .qwestions .swiper-container .qwestions-block .col {
+    padding: 0;
+    width: 100%;
+    margin: auto;
+  }
+  .qwestions .swiper-container .qwestions-block .qwestions__item {
+    margin-top: 15px;
+  }
+  .qwestions .swiper-container .qwestions-block .qwestions__item .qwestions__item--text {
+    font-size: 10px;
+    line-height: 18px;
+    margin-right: 5px;
+  }
+  .qwestions .swiper-container .qwestions-block .qwestions__item .qwestions__item--text .title {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .qwestions .swiper-container .qwestions-block .qwestions__item .qwestions__item--icon .icon {
+    width: 25px;
+  }
+}
+@media (max-width: 1254px) {
+  .qwestions .qwestions-block {
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .qwestions .qwestions-block .row .col {
+    width: 33.3333%;
+  }
+  .qwestions .qwestions-block .row .col:nth-child(1) {
+    margin-right: 16px;
+  }
+  .qwestions .qwestions-block .row .col:nth-child(3) {
+    margin-left: 16px;
+  }
+  .qwestions .qwestions-block .qwestions__item {
+    width: auto;
+    padding: 15px;
+  }
+  .qwestions .qwestions-block .qwestions__item .qwestions__item--text {
+    font-size: 10px;
+    line-height: 15px;
+    margin-right: 10px;
+  }
+  .qwestions .qwestions-block .qwestions__item .qwestions__item--text .title {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .qwestions .qwestions-block .qwestions__item .qwestions__item--icon .icon {
+    width: 25px;
   }
 }
 
