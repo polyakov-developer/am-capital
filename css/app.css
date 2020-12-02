@@ -426,12 +426,8 @@ th {
 }
 
 body {
-<<<<<<< HEAD
   background-color: #FBFBFB;
   color: #7d7d7d;
-=======
-  color: #37474F;
->>>>>>> 98e28d6... Начал делать контакты
   display: flex;
   flex-direction: column;
   font-size: 16px;
@@ -1348,7 +1344,6 @@ a:hover:not(.button) {
   }
 }
 
-<<<<<<< HEAD
 .qwestions {
   padding-top: 0;
   padding-bottom: 0;
@@ -1496,11 +1491,9 @@ a:hover:not(.button) {
   }
 }
 
-=======
 .compare {
   padding-bottom: 0;
 }
->>>>>>> 9d0c2e5... Небольшие фиксы, начал работу над блоком с консультацией
 .compare .section-heading {
   /* Define variable for media query */
   /* Define variable for fallback */
