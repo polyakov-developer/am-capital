@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AM-Capital</title>
   <link rel="stylesheet" href="./css/app.min.css">
+  <script src="./js/libs/current-device.min.js"></script>
 </head>
 
 <body>
@@ -462,6 +463,75 @@
           </tbody>
         </table>
       </div>
+    </section>
+
+    <!-- Consultation -->
+    <section class="section consultation">
+      <div class="container">
+        <div class="row">
+          <div class="col col--left">
+            <img src="./img/bg-consultation.png">
+          </div>
+          <div class="col col--right">
+            <p class="section-heading h3">Закажите бесплатную <br> онлайн-консультацию прямо сейчас!</p>
+            <p>Кредитный специалист ответит на все вопросы и поможет подобрать лучшее решение.</p>
+            <form>
+              <input type="text" name="f_UserName" class="form-control" placeholder="Имя">
+              <input type="tel" name="f_Telephone" class="form-control" placeholder="Телефон">
+              <button type="submit" class="button button--state--active">
+                <span>Отправить</span>
+              </button>
+              <span class="legal">
+                Заполняя данную форму, я соглашаюсь с
+                <a href="#">политикой обработки персональных данных</a>
+              </span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacts -->
+    <section class="section contacts">
+      <div class="container">
+        <p class="section-heading h2">Наши контакты</p>
+        <p class="hours">
+          Понедельник - Пятница: <span class="color--secondary">09:00–21:00</span> <br>
+          Суббота - Воскресенье: <span style="color: #7D7D7D">выходной</span>
+        </p>
+
+        <div class="contacts-list">
+          <div class="contacts-list__item contacts-list__item--type--local">
+            <span>г .Москва, ул. Щипок, дом. 2</span>
+          </div>
+          <div class="contacts-list__item contacts-list__item--type--phone">
+            <span>+7 (499) 450-33-82</span>
+          </div>
+          <div class="contacts-list__item contacts-list__item--type--email">
+            <span>office@mrkred.ru</span>
+          </div>
+        </div>
+
+        <form>
+          <input type="text" class="form-control" placeholder="Имя" required>
+          <input type="tel" class="form-control" placeholder="Телефон" required>
+          <div>
+            <button type="submit" id="contactsSubmit" class="button button--state--active">Отправить</button>
+          </div>
+
+          <div class="terms-and-conditions">
+            <div class="fake-checkbox">
+              <input type="checkbox" id="contactsCheckbox" checked="" onclick="document.getElementById('contactsSubmit').disabled = !this.checked;">
+              <label for="contactsCheckbox"></label>
+            </div>
+            <span class="legal">
+              Заполняя данную форму, я соглашаюсь с
+              <a href="#">политикой обработки персональных данных</a>
+            </span>
+          </div>
+        </form>
+      </div>
+      <img src="./img/map.png" class="map">
     </section>
   </main>
 

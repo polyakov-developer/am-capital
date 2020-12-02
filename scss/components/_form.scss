@@ -1,0 +1,63 @@
+form {
+  .form-control {
+    background-color: #fff;
+    border: 1px solid #717CFF;
+    border-radius: 11px;
+    color: #7D7D7D;
+    font-size: 18px;
+    outline: none;
+    padding: 20px 24px;
+  }
+
+  .legal {
+    color: #313782;
+    display: block;
+    font-size: 12px;
+    margin-top: 10px;
+
+    a {
+      border-bottom: 1px solid currentColor;
+      color: #313782;
+    }
+  }
+
+  button[type=submit] {
+    align-items: center;
+    display: flex;
+    padding: 20px 24px;
+
+    &::after {
+      background-image: url(../img/icons/arrow_right.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: '';
+      height: 16px;
+      margin-left: 12px;
+      width: 18px;
+    }
+  }
+
+  .terms-and-conditions {
+    align-items: center;
+    display: flex;
+    margin-top: 16px;
+
+    .fake-checkbox {
+      flex: none;
+      margin-right: 20px;
+    }
+  }
+
+  @media (max-width: $sTabletWidth) {
+    .form-control {
+      font-size: 16px;
+      max-width: initial;
+      padding: 16px 20px;
+    }
+
+    button[type=submit] {
+      padding: 16px 20px;
+    }
+  }
+}
