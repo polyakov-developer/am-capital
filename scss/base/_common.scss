@@ -9,7 +9,7 @@
 
 body {
   background-color: #FBFBFB;
-  color: $subSecondary;
+  color: #7d7d7d;
   display: flex;
   flex-direction: column;
   font-size: 16px;
@@ -30,6 +30,7 @@ h5,
 .h5,
 h6,
 .h6 {
+  color: #2F2F2F;
   font-weight: 600;
 }
 
@@ -138,38 +139,3 @@ a {
     background: $secondary !important;
   }
 }
-
-/**Advantages**/
-.advantages{
-  padding-top:20px;
-
-  .section-heading {
-     margin: 0;
-     width: 60%;
-   }
-
-    .txtblock-wrapper {
-      margin-top:24px;
-      color:#7d7d7d;
-      line-height:24px;
-    }
-
-  @media (max-width: $tabletWidth) {
-   .section-heading {
-    width: 70%;
-    }
-  }
-
-  @media (max-width: $phoneWidth) {
-   .section-heading {
-     width: 100%;
-    }
-
-   .txtblock-wrapper {
-     font-size:10px;
-     margin-top:10px;
-     line-height:14px;
-     }
-   }
-}
-/**Advantages**/

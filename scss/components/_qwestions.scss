@@ -1,58 +1,58 @@
 .qwestions {
-  padding-top:0;
-  padding-bottom:0;
-  background:#F1F1F1;
+  padding-top: 0;
+  padding-bottom: 0;
+  background: #F1F1F1;
 
   .qwestions-block {
-    display:flex;
-    height:auto;
-    justify-content:center;
-    align-items:center;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
 
     .row {
-      display:flex;
+      display: flex;
       padding-top: 40px;
-    padding-bottom: 40px;
+      padding-bottom: 40px;
 
-      .col{
-        display:flex;
-        flex-direction:column;
+      .col {
+        display: flex;
+        flex-direction: column;
       }
 
       .col:nth-child(1) {
-        margin-right:40px;
+        margin-right: 40px;
       }
 
       .col:nth-child(3) {
-        margin-left:40px;
+        margin-left: 40px;
       }
     }
 
     .qwestions__item {
-      width:380px;
-      background:#FFFFFF;
-      display:flex;
-      border-radius:15px;
-      padding:24px;
-      height:100%;
-      position:relative;
+      width: 380px;
+      background: #FFFFFF;
+      display: flex;
+      border-radius: 15px;
+      padding: 24px;
+      height: 100%;
+      position: relative;
 
       .qwestions__item--text {
-        display:flex;
+        display: flex;
         flex-direction: column;
-        margin-right:46px;
-        font-size:12px;
-        color:#7D7D7D;
-        line-height:20px;
+        margin-right: 46px;
+        font-size: 12px;
+        color: #7D7D7D;
+        line-height: 20px;
 
 
         .title {
           margin-top: auto;
-          margin-bottom:auto;
-          font-weight:600;
-          font-size:16px;
-          color:#37474F;
-          line-height:22px;
+          margin-bottom: auto;
+          font-weight: 600;
+          font-size: 16px;
+          color: #37474F;
+          line-height: 22px;
         }
 
         .more {
@@ -65,10 +65,10 @@
         .full-link {
           border: none;
           height: 100%;
-          position:absolute;
+          position: absolute;
           width: 100%;
-          left:0;
-          top:0;
+          left: 0;
+          top: 0;
         }
 
         .more.link--with-arrow:after {
@@ -76,59 +76,63 @@
           width: 8px;
         }
       }
-      .qwestions__item--icon{
-        display:flex;
+
+      .qwestions__item--icon {
+        display: flex;
         align-items: flex-start;
       }
     }
   }
+
   .swiper-container {
     display: none;
 
     .swiper-pagination {
       margin-top: 10px;
-      margin-bottom:15px;
+      margin-bottom: 15px;
       position: static;
     }
   }
 
   @media (max-width: 580px) {
-   .qwestions-block {
+    .qwestions-block {
       display: none;
     }
-   .swiper-container {
+
+    .swiper-container {
       display: block;
 
-     .qwestions-block {
-       display: flex;
-       margin-left: 0;
-       margin-right: 0;
-       min-height: initial;
+      .qwestions-block {
+        display: flex;
+        margin-left: 0;
+        margin-right: 0;
+        min-height: initial;
 
-       .col {
-         padding: 0;
-         width: 100%;
-         margin:auto;
+        .col {
+          padding: 0;
+          width: 100%;
+          margin: auto;
         }
 
-        .qwestions__item{
-          margin-top:15px;
+        .qwestions__item {
+          margin-top: 15px;
 
-          .qwestions__item--text{
-            font-size:10px;
-            line-height:18px;
-            margin-right:5px;
+          .qwestions__item--text {
+            font-size: 10px;
+            line-height: 18px;
+            margin-right: 5px;
 
             .title {
-              font-size:12px;
-              line-height:16px;
+              font-size: 12px;
+              line-height: 16px;
 
             }
           }
-          .qwestions__item--icon{
 
-            .icon{
-              width:25px;
+          .qwestions__item--icon {
+
+            .icon {
+              width: 25px;
             }
           }
         }
@@ -139,47 +143,46 @@
   @media (max-width: $desktopWidth) {
     .qwestions-block {
       flex-wrap: wrap;
-      height:auto;
+      height: auto;
 
-      .row{
+      .row {
 
-       .col {
-         width: 33.3333%;
+        .col {
+          width: 33.3333%;
 
-       }
-       .col:nth-child(1) {
-         margin-right:16px;
-       }
+        }
 
-       .col:nth-child(3) {
-         margin-left:16px;
-       }
+        .col:nth-child(1) {
+          margin-right: 16px;
+        }
+
+        .col:nth-child(3) {
+          margin-left: 16px;
+        }
       }
 
       .qwestions__item {
         width: auto;
-        padding:15px;
+        padding: 15px;
 
         .qwestions__item--text {
-          font-size:10px;
-          line-height:15px;
-          margin-right:10px;
+          font-size: 10px;
+          line-height: 15px;
+          margin-right: 10px;
 
-          .title{
-            font-size:12px;
-            line-height:16px;
+          .title {
+            font-size: 12px;
+            line-height: 16px;
           }
         }
 
-        .qwestions__item--icon{
+        .qwestions__item--icon {
 
-          .icon{
-              width:25px;
-            }
+          .icon {
+            width: 25px;
+          }
         }
       }
     }
   }
 }
-
-

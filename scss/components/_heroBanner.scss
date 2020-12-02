@@ -73,6 +73,7 @@
       }
 
       .title {
+        color: #37474F;
         margin-top: auto;
         width: 57%;
       }
@@ -127,6 +128,7 @@
       color: $subSecondary;
       flex: none;
       line-height: 1.4;
+      letter-spacing: 1.6px;
       margin: 0;
       margin-right: 38px;
       opacity: .7;
@@ -147,6 +149,12 @@
         a {
           border: none;
           font-size: 14px;
+        }
+
+        &:hover {
+          a {
+            color: #fff;
+          }
         }
       }
     }
@@ -322,7 +330,7 @@
       }
     }
   }
-  
+
   @media (max-width: 320px) {
     &__subnav {
       ul {

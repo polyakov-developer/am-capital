@@ -422,7 +422,7 @@ th {
 
 body {
   background-color: #FBFBFB;
-  color: #37474F;
+  color: #7d7d7d;
   display: flex;
   flex-direction: column;
   font-size: 16px;
@@ -443,6 +443,7 @@ h5,
 .h5,
 h6,
 .h6 {
+  color: #2F2F2F;
   font-weight: 600;
 }
 
@@ -657,36 +658,6 @@ a:hover:not(.button) {
   background: #717CFF !important;
 }
 
-/**Advantages**/
-.advantages {
-  padding-top: 20px;
-}
-.advantages .section-heading {
-  margin: 0;
-  width: 60%;
-}
-.advantages .txtblock-wrapper {
-  margin-top: 24px;
-  color: #7d7d7d;
-  line-height: 24px;
-}
-@media (max-width: 1024px) {
-  .advantages .section-heading {
-    width: 70%;
-  }
-}
-@media (max-width: 420px) {
-  .advantages .section-heading {
-    width: 100%;
-  }
-  .advantages .txtblock-wrapper {
-    font-size: 10px;
-    margin-top: 10px;
-    line-height: 14px;
-  }
-}
-
-/**Advantages**/
 .header {
   padding-bottom: 24px;
   padding-top: 24px;
@@ -996,6 +967,7 @@ a:hover:not(.button) {
   top: 16px;
 }
 .hero-banner .pages-block .pages__item .title {
+  color: #37474F;
   margin-top: auto;
   width: 57%;
 }
@@ -1040,6 +1012,7 @@ a:hover:not(.button) {
   color: #37474F;
   flex: none;
   line-height: 1.4;
+  letter-spacing: 1.6px;
   margin: 0;
   margin-right: 38px;
   opacity: 0.7;
@@ -1059,6 +1032,9 @@ a:hover:not(.button) {
 .hero-banner__subnav ul li a {
   border: none;
   font-size: 14px;
+}
+.hero-banner__subnav ul li:hover a {
+  color: #fff;
 }
 @media (max-width: 1254px) {
   .hero-banner .pages-block {
