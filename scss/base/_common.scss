@@ -1,3 +1,4 @@
+@include font-face("Montserrat", '/fonts/Montserrat/Montserrat-Regular', 400);
 @include font-face("Montserrat", '/fonts/Montserrat/Montserrat-Medium', 500);
 @include font-face("Montserrat", '/fonts/Montserrat/Montserrat-MediumItalic', 500, italic);
 @include font-face("Montserrat", '/fonts/Montserrat/Montserrat-Semibold', 600);
@@ -8,8 +9,12 @@
 }
 
 body {
+<<<<<<< HEAD
   background-color: #FBFBFB;
   color: #7d7d7d;
+=======
+  color: $subSecondary;
+>>>>>>> 98e28d6... Начал делать контакты
   display: flex;
   flex-direction: column;
   font-size: 16px;

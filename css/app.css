@@ -396,6 +396,11 @@ th {
 
 @font-face {
   font-family: "Montserrat";
+  font-weight: 400;
+  src: url("/fonts/Montserrat/Montserrat-Regular.eot?") format("eot"), url("/fonts/Montserrat/Montserrat-Regular.woff2") format("woff2"), url("/fonts/Montserrat/Montserrat-Regular.woff") format("woff"), url("/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype"), url("/fonts/Montserrat/Montserrat-Regular.svg#Montserrat") format("svg");
+}
+@font-face {
+  font-family: "Montserrat";
   font-weight: 500;
   src: url("/fonts/Montserrat/Montserrat-Medium.eot?") format("eot"), url("/fonts/Montserrat/Montserrat-Medium.woff2") format("woff2"), url("/fonts/Montserrat/Montserrat-Medium.woff") format("woff"), url("/fonts/Montserrat/Montserrat-Medium.ttf") format("truetype"), url("/fonts/Montserrat/Montserrat-Medium.svg#Montserrat") format("svg");
 }
@@ -421,8 +426,12 @@ th {
 }
 
 body {
+<<<<<<< HEAD
   background-color: #FBFBFB;
   color: #7d7d7d;
+=======
+  color: #37474F;
+>>>>>>> 98e28d6... Начал делать контакты
   display: flex;
   flex-direction: column;
   font-size: 16px;
@@ -1859,6 +1868,7 @@ form .legal a {
 form button[type=submit] {
   align-items: center;
   display: flex;
+  padding: 20px 24px;
 }
 form button[type=submit]::after {
   background-image: url(../img/icons/arrow_right.svg);
@@ -1870,12 +1880,104 @@ form button[type=submit]::after {
   margin-left: 12px;
   width: 18px;
 }
+form .terms-and-conditions {
+  align-items: center;
+  display: flex;
+  margin-top: 16px;
+}
+form .terms-and-conditions .fake-checkbox {
+  flex: none;
+  margin-right: 20px;
+}
 @media (max-width: 768px) {
   form .form-control {
     font-size: 16px;
     max-width: initial;
     padding: 16px 20px;
   }
+  form button[type=submit] {
+    padding: 16px 20px;
+  }
+}
+
+.contacts {
+  background-color: #FAFAFA;
+  min-height: 680px;
+  padding-top: 70px;
+  position: relative;
+}
+.contacts .container {
+  position: relative;
+  z-index: 1;
+}
+.contacts .section-heading {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.contacts p.hours {
+  margin-bottom: 0;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+.contacts .contacts-list {
+  margin-top: 24px;
+}
+.contacts .contacts-list__item {
+  align-items: center;
+  display: flex;
+  margin-bottom: 20px;
+}
+.contacts .contacts-list__item--type--local::before {
+  background-image: url(../img/local.svg);
+  background-size: 34px;
+}
+.contacts .contacts-list__item--type--phone::before {
+  background-image: url(../img/phone.svg);
+  background-size: 15px 24px;
+}
+.contacts .contacts-list__item--type--email::before {
+  background-image: url(../img/email.svg);
+  background-size: 24px;
+}
+.contacts .contacts-list__item::before {
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+  display: block;
+  height: 24px;
+  order: 0;
+  width: 24px;
+}
+.contacts .contacts-list__item::after {
+  background-color: #D6DDE5;
+  content: "";
+  display: block;
+  height: 16px;
+  margin: 0 14px 0 18px;
+  order: 1;
+  width: 1px;
+}
+.contacts .contacts-list__item span {
+  font-weight: 400;
+  order: 2;
+}
+.contacts form {
+  margin-top: 40px;
+  width: 375px;
+}
+.contacts form .form-control {
+  margin-bottom: 15px;
+  width: 100%;
+}
+.contacts form button[type=submit] {
+  justify-content: center;
+  width: 100%;
+}
+.contacts .map {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .footer {
@@ -2124,4 +2226,41 @@ button--style--blank,
   border-color: #717CFF;
   color: #fff;
   text-decoration: none;
+}
+
+.fake-checkbox {
+  background: #717CFF;
+  border-radius: 50px;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  height: 30px;
+  position: relative;
+  width: 69px;
+}
+.fake-checkbox label {
+  background: #F9F9FB;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  height: 35px;
+  left: -2px;
+  position: absolute;
+  top: -3px;
+  transition: all 0.4s ease;
+  width: 35px;
+}
+.fake-checkbox input[type=checkbox] {
+  bottom: 0;
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+.fake-checkbox input[type=checkbox]:checked + label {
+  left: 35px;
 }
