@@ -1524,13 +1524,22 @@ a:hover:not(.button) {
   align-items: baseline;
   min-height: 38px;
 }
-.edge .row button[type=submit] {
+.edge .edge__button {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.edge .edge__button .button--state--active {
+  margin-right: 25px;
+}
+.edge .edge__button button[type=submit] {
   align-items: center;
   display: flex;
-  padding: 0px 25px;
   margin-top: 20px;
+  padding: 20px 24px;
+  justify-content: center;
 }
-.edge .row button[type=submit]::after {
+.edge .edge__button button[type=submit]::after {
   background-image: url(../img/icons/arrow_right.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -1540,10 +1549,7 @@ a:hover:not(.button) {
   margin-left: 12px;
   width: 18px;
 }
-.edge .row .button--state--active {
-  margin-right: 25px;
-}
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .edge .description-heading {
     font-size: 12px;
     line-height: 20px;
@@ -1562,6 +1568,9 @@ a:hover:not(.button) {
     width: 100%;
     padding-right: 10px;
     padding-left: 10px;
+  }
+  .edge .edge__button button[type=submit] {
+    padding: 16px 20px;
   }
 }
 @media (max-width: 620px) {
@@ -1582,18 +1591,12 @@ a:hover:not(.button) {
     font-size: 12px;
     line-height: 16px;
   }
-  .edge .row button[type=submit] {
+  .edge .edge__button {
+    padding: 0 20px;
+  }
+  .edge .edge__button button[type=submit] {
     margin-right: 0px;
     width: 100%;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-  }
-}
-@media (max-width: 320px) {
-  .edge .row {
-    padding-left: 0px;
-    padding-right: 0px;
   }
 }
 
@@ -2078,6 +2081,7 @@ form .terms-and-conditions .fake-checkbox {
   right: 0;
   top: 0;
 }
+
 .footer {
   background-color: #292828;
   padding: 36px 0;
