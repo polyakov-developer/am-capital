@@ -26,3 +26,13 @@ if (document.getElementById('heroBannerSwiper')) {
     }
   })
 }
+
+if (document.getElementById('qwestionsSwiper')) {
+  new Swiper('#qwestionsSwiper', {
+    loop: true,
+    spaceBetween: 10,
+    pagination: {
+      el: '#qwestionsSwiper .swiper-pagination',
+    }
+  })
+}

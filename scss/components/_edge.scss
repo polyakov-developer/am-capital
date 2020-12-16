@@ -1,0 +1,141 @@
+.edge {
+  padding-top:0px;
+
+  .section-heading{
+    text-align: center;
+  }
+
+  .description-heading{
+    text-align: center;
+    line-height:24px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding:10px 70px;
+
+    .col{
+      display: flex;
+      flex-direction: column;
+      width:25%;
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        line-height:20px;
+        padding: 16px;
+        font-size:14px;
+        margin-top:auto;
+
+        .title {
+          color:$subSecondary;
+          line-height:22px;
+          font-weight:600;
+          margin-top:10px;
+          font-size:16px;
+          margin-bottom:0px;
+        }
+      }
+
+      .icon{
+        align-items: baseline;
+        min-height: 38px;
+        }
+    }
+  }
+
+  .edge__button{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .button--state--active{
+      margin-right:25px;
+    }
+  
+    button[type=submit] {
+      align-items: center;
+      display: flex;
+      margin-top:20px;
+      padding: 20px 24px;
+      justify-content: center;
+
+      &::after {
+        background-image: url(../img/icons/arrow_right.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: '';
+        height: 16px;
+        margin-left: 12px;
+        width: 18px;
+      }
+    }
+  }
+  
+    @media (max-width: $sTabletWidth) {
+      .description-heading{
+        font-size: 12px;
+        line-height: 20px;
+
+      }
+        .row{
+          flex-wrap: wrap;
+          padding-left: 40px;
+          padding-right: 40px;
+
+          .col{
+            width:50%;
+
+            .text{
+              align-items: center;
+              text-align: center;
+              width:100%;
+              padding-right:10px;
+              padding-left:10px;
+            }
+          }
+        }
+
+        .edge__button{
+          
+          button[type=submit] {
+          padding: 16px 20px;
+          }
+        }
+    }
+
+      @media (max-width: 620px) {
+        .row{
+          margin-top:0px;
+          padding-left: 20px;
+          padding-right: 20px;
+
+          .col{
+            width:50%;
+
+            .text{
+              width:100%;
+              font-size: 10px;
+              line-height: 14px;
+
+              .title{
+                font-size: 12px;
+                line-height: 16px;
+              }
+            }
+          }
+        }
+        .edge__button{
+          padding:0 20px;
+
+          button[type=submit] {
+            margin-right:0px;
+            width:100%;
+          }
+        }
+      }
+}
+
